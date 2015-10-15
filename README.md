@@ -1,0 +1,80 @@
+# Accela Angular Seed
+
+An AngularJS starter project that uses some of the Automation 8.0 core components.
+
+## Version
+1.0.0
+
+## Prerequisites
+* [NodeJS](http://nodejs.org/) - for server-side package management, and to enable Grunt build automation
+* [Bower](http://bower.io/) - for client-side package management (see "Install Bower and Grunt client" below)
+
+## Tech
+* [AngularJS](https://angularjs.org/) - JavaScript MVC framework.
+* [angular-ui-router](https://github.com/angular-ui/ui-router) - provides flexible routing with nested views.
+* [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras.
+* [sprintf](https://github.com/alexei/sprintf.js) - sprintf implementation for the browser and node.js.
+* [stacktrace](https://github.com/stacktracejs/stacktrace.js/) - Framework-agnostic, micro-library for getting stack traces in all web browsers.
+
+* [Grunt](http://gruntjs.com/) - for build automation and testing.
+    * [LESS](http://lesscss.org/) - to enhance our CSS development experience.
+    * [JSHint](http://www.jshint.com/docs/) - to ensure consistent coding practices.
+    * [WireDep](https://github.com/stephenplusplus/grunt-wiredep) - to inject Bower packages into the source code with Grunt.
+    * [Karma](karma-runner.github.io) - to run unit tests.
+    * [Protractor](https://angular.github.io/protractor) - to run E2E browsers tests (see below).
+
+## Initial Steps
+
+### Install Bower, the Grunt client, and Protractor for E2E testing (the -g flag makes these globally available)
+
+```
+npm install -g bower
+npm install -g grunt-cli
+npm install -g protractor
+```
+
+### Install NodeJS packages defined in "spa\packages.json"
+* These are used by the build tools, and are installed into the "spa\node_modules" folder.
+
+```
+npm install
+```
+
+### Install front-end JavaScript packages defined in "spa\bower.json"
+* These include AngularJS, and are installed into the "spa\bower_components" folder.
+
+```
+bower install
+```
+
+### Run grunt "default" task (defined in "spa\gruntfile.js"
+* Compiles .less files to .css, etc...
+
+```
+grunt
+```
+
+## Testing
+
+### For localhost testing:
+
+```
+grunt web_server
+```
+
+* and browse to https://localhost:3000/index.html
+
+### For Unit testing:
+* run "grunt web_server"
+* then run "grunt karma:unit"
+
+### For integration testing:
+* Assumes that the backend code has been compiled, and that av.biz and av.web are running.
+* You will need to change the domain to your local machine name, and update config.js
+* browse to https://dbalmer-vm864.accela.com:5443/portlets/spa/dashboard.do
+
+### For Protractor E2E testing, run this from the command line:
+* webdriver-manager update (not needed every time, but should be run the first time)
+* webdriver-manager start
+* then run "grunt web_server"
+* then run "grunt protractor"

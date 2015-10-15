@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr" id="ng-app" ng-app="accela.automation" xmlns:ng="http://angularjs.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Accela Automation Seed</title>
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+<body ng-cloak>
+  <main ui-view="" role="main">
+    <!-- ui-router content is placed here -->
+  </main>
+
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/sprintf/src/sprintf.js"></script>
+  <script src="bower_components/stacktrace-js/stacktrace.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <!-- endbower -->
+
+  <script src="js/config.js"></script>
+
+  <!-- 'accela.core' module -->
+  <script src="js/core/accela.js"></script>
+  <script src="js/core/module.js"></script>
+  <script src="js/core/stacktrace-wrapper.js"></script>
+  <script src="js/core/services/data-service.js"></script>
+  <script src="js/core/services/http-interceptor.js"></script>
+  <script src="js/core/services/logging-service.js"></script>
+
+  <!-- 'accela.automation' module -->
+  <script src="js/automation/module.js"></script>
+  <script src="js/automation/automation-controller.js"></script>
+</body>
+</html>

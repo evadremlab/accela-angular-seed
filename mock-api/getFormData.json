@@ -1,0 +1,10 @@
+{
+  "status": 200,
+  "result": {
+    "fields": {
+      "firstname": "Bob",
+      "lastname": "Loblaw",
+      "email": "me@home.com"
+    }
+	}
+}

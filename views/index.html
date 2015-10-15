@@ -1,0 +1,16 @@
+<!-- data-binding using ngRepeat -->
+<!-- two-way data-binding using ngModel -->
+<table>
+  <tr>
+    <th>KEY</th>
+    <th>VALUE</th>
+    <th>INPUT</th>
+  </tr>
+  <tr ng-repeat="(key,value) in formData">
+    <td>{{key}}</td>
+    <td>{{value}}</td>
+    <td>
+      <input type="text" ng-model="formData[key]">
+    </td>
+  </tr>
+</table>

@@ -12,7 +12,7 @@ An AngularJS starter project that uses some of the Automation 8.0 core component
 ## Tech
 * [AngularJS](https://angularjs.org/) - JavaScript MVC framework.
 * [angular-ui-router](https://github.com/angular-ui/ui-router) - provides flexible routing with nested views.
-* [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, & extras.
+* [lodash](https://lodash.com/) - A JavaScript utility library delivering consistency, modularity, performance, and extras.
 * [sprintf](https://github.com/alexei/sprintf.js) - sprintf implementation for the browser and node.js.
 * [stacktrace](https://github.com/stacktracejs/stacktrace.js/) - Framework-agnostic, micro-library for getting stack traces in all web browsers.
 
@@ -33,21 +33,21 @@ npm install -g grunt-cli
 npm install -g protractor
 ```
 
-### Install NodeJS packages defined in "spa\packages.json"
-* These are used by the build tools, and are installed into the "spa\node_modules" folder.
+### Install NodeJS packages defined in "packages.json"
+* These are used by the build tools, and are installed into the "node_modules" folder.
 
 ```
 npm install
 ```
 
-### Install front-end JavaScript packages defined in "spa\bower.json"
-* These include AngularJS, and are installed into the "spa\bower_components" folder.
+### Install front-end JavaScript packages defined in "bower.json"
+* These include AngularJS, and are installed into the "bower_components" folder.
 
 ```
 bower install
 ```
 
-### Run grunt "default" task (defined in "spa\gruntfile.js"
+### Run grunt "default" task (defined in "gruntfile.js"
 * Compiles .less files to .css, etc...
 
 ```
@@ -67,11 +67,6 @@ grunt web_server
 ### For Unit testing:
 * run "grunt web_server"
 * then run "grunt karma:unit"
-
-### For integration testing:
-* Assumes that the backend code has been compiled, and that av.biz and av.web are running.
-* You will need to change the domain to your local machine name, and update config.js
-* browse to https://dbalmer-vm864.accela.com:5443/portlets/spa/dashboard.do
 
 ### For Protractor E2E testing, run this from the command line:
 * webdriver-manager update (not needed every time, but should be run the first time)
